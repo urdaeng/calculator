@@ -6,19 +6,13 @@
 //
 
 //import Foundation
-//
+
 //print("Hello, World!")
 
 class Calculator {
     var oprator: String = ""
     var firstNumber: Int = 0
     var secondNumber: Int = 0
-
-//    init(oprator: String, firstNumber: Int, secondNumber: Int) {
-//        self.oprator = oprator
-//        self.firstNumber = firstNumber
-//        self.secondNumber = secondNumber
-//    }
     
     func calculator(oprator: String, firstNumber: Int, secondNumber: Int) -> Double {
         
@@ -42,7 +36,7 @@ class Calculator {
 }
 
 let num = Calculator()
-//print(num.calculator(oprator: "+", firstNumber: 1, secondNumber: 2))
+print(num.calculator(oprator: "+", firstNumber: 1, secondNumber: 2))
 
 
 class AbstractOperation : Calculator {
@@ -72,9 +66,6 @@ class AddOperation : AbstractOperation {
     }
 }
 
-let addResult = AddOperation()
-print(addResult.add(firstNumber: 2, secondNumber: 2))
-
 
 class SubtractOperation: AbstractOperation {
     
@@ -96,3 +87,13 @@ class DivideOperation: AbstractOperation {
         super.Divide(firstNumber: firstNumber, secondNumber: secondNumber)
     }
 }
+
+
+let addResult = AddOperation()
+print(addResult.add(firstNumber: 2, secondNumber: 2))
+let subtractResult = SubtractOperation()
+print(subtractResult.Subtract(firstNumber: 2, secondNumber: 2))
+let multiplyResult = MultiplyOperation()
+print(multiplyResult.Multiply(firstNumber: 2, secondNumber: 2))
+let divide = DivideOperation()
+print(divide.Divide(firstNumber: 2, secondNumber: 2))
